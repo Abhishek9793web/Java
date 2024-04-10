@@ -1,11 +1,13 @@
-public class pattern_8 {
-    public static void main(String[] args) {
+package lec3;
+
+public class pattern_15 {
+    public static void main(String[] args){
         int n = 5;
 
-        int cstar = 1;
-        int cspace = n - 1;
         int row_no = 1;
-        while (row_no <= 5) {
+        int cstar = n;
+        int cspace = 0;
+        while (row_no <= 2*n-1) {
             int space = 1;
             while (space <= cspace) {
                 System.out.print("  ");
@@ -16,11 +18,17 @@ public class pattern_8 {
                 System.out.print("* ");
                 star = star + 1;
             }
+            if(row_no<n){
+
+                cspace = cspace + 2;
+                cstar = cstar - 1;}
+            else{
+                cspace=cspace-2;
+                cstar=cstar+1;
+
+            }
             row_no = row_no + 1;
-            cspace = cspace - 1;
-            cstar = cstar + 2;
             System.out.println();
         }
-
     }
 }

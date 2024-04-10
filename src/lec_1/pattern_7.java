@@ -1,3 +1,5 @@
+package lec_1;
+
 public class pattern_7 {
     public static void main(String[] args) {
         int n=5;
